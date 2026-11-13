@@ -6,13 +6,26 @@
   --crimson: #ba1b1d; 
   --crimson-dark: #8f1315; 
   --line: #e2e2e4;
+  --card-bg: #fff;
   --display: var(--font-display), Georgia, serif;
   --sans: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Modo Oscuro */
+.dark {
+  --paper: #0e1117;
+  --sand: #161b22;
+  --ink: #f0f3f6;
+  --slate: #8b949e;
+  --crimson: #e02424;
+  --crimson-dark: #c51d1d;
+  --line: #30363d;
+  --card-bg: #161b22;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; transition: background 0.3s ease, color 0.3s ease; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--crimson); outline-offset: 3px; border-radius: 4px; }
 h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.12; letter-spacing: -0.015em; margin: 0; }
@@ -35,7 +48,10 @@ p { margin: 0 0 1rem; }
   height: 36px;
   width: 36px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  /* Si tu logo es oscuro, en dark mode puedes invertirlo o quitar el mix-blend */
+}
+.dark .brand-logo {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .brand-name {
@@ -63,7 +79,7 @@ p { margin: 0 0 1rem; }
 
 .thread { margin: 0; padding: 1.5rem; background: var(--sand); border-radius: 28px; display: flex; flex-direction: column; gap: .75rem; animation: rise .9s .25s cubic-bezier(.2,.7,.2,1) both; }
 .msg { margin: 0; padding: .8rem 1.1rem; max-width: 88%; font-size: .98rem; line-height: 1.5; }
-.msg.them { background: #fff; border-radius: 18px 18px 18px 4px; align-self: flex-start; }
+.msg.them { background: var(--card-bg); border-radius: 18px 18px 18px 4px; align-self: flex-start; border: 1px solid var(--line); }
 .msg.us { background: var(--crimson); color: #fff; border-radius: 18px 18px 4px 18px; align-self: flex-end; }
 .thread figcaption { margin-top: .5rem; font-size: .9rem; color: var(--slate); font-style: italic; font-family: var(--display); }
 
@@ -106,7 +122,7 @@ p { margin: 0 0 1rem; }
 }
 
 .story-card {
-  background: #fff;
+  background: var(--card-bg);
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: clamp(1.5rem, 4vw, 3rem);
@@ -161,6 +177,25 @@ p { margin: 0 0 1rem; }
   letter-spacing: 0.04em;
   color: var(--crimson);
   margin: 0 0 0.5rem;
+}
+
+.theme-btn {
+  background: var(--sand);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.theme-btn:hover {
+  border-color: var(--slate);
+  transform: scale(1.05);
 }
 
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }

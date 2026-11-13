@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 import { site } from "./site";
 
 const servicios = [
@@ -66,28 +67,6 @@ const rigor = [
 export default function Home() {
   return (
     <>
-      <header className="nav">
-        <a href="#top" className="brand" aria-label={site.name}>
-          <Image
-            src="/favicon.png"
-            alt={`${site.name} - Desarrollo y Sistemas`}
-            width={40}
-            height={40}
-            priority
-            className="brand-logo"
-          />
-          <span className="brand-name">LITA</span>
-        </a>
-        <nav aria-label="Principal">
-          <a href="/calculadora">Servicios</a>
-          <a href="#metodo">Cómo trabajamos</a>
-          <a href="#ingenieria">Ingeniería</a>
-          <a href="#contacto" className="btn btn-small">
-            Hablemos
-          </a>
-        </nav>
-      </header>
-
       <main id="top">
         <section className="hero">
           <div className="hero-text">
