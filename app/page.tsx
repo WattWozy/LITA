@@ -80,7 +80,6 @@ export default function Home() {
         </a>
         <nav aria-label="Principal">
           <a href="/calculadora">Servicios</a>
-          <a href="/historias">Historias</a>
           <a href="#metodo">Cómo trabajamos</a>
           <a href="#ingenieria">Ingeniería</a>
           <a href="#contacto" className="btn btn-small">

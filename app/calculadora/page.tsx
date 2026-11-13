@@ -45,13 +45,13 @@ export default function ServiciosPage() {
                     <span className="story-meta">{item.plazo}</span>
                     <h2>{item.nombre}</h2>
                   </div>
-                  <div className="story-tags">
+                  {/* <div className="story-tags">
                     {item.stack.map((tech) => (
                       <span key={tech} className="tag">
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </header>
 
                 <h3 className="story-headline">{item.headline}</h3>
