@@ -22,7 +22,7 @@ export interface Historia {
 export const servicios = [
   {
     slug: "centralizacion-sistemas",
-    nombre: "Centralización de sistemas internos",
+    nombre: "Centralización de sistemas",
     plazo: "Según alcance del proyecto",
     headline: "Menos herramientas desconectadas. Más control sobre tu negocio.",
     problema:
@@ -56,6 +56,25 @@ export const servicios = [
       "Tiempo necesario para generar informes",
       "Visibilidad sobre ventas, costes y operaciones",
       "Frecuencia de actualización de indicadores",
+    ],
+  },
+  {
+    slug: "automatización-a-medida",
+    nombre: "Automatización de procesos a medida",
+    plazo: "Según alcance del proyecto",
+    headline: "Ahórrate el tiempo de los procesos más repetitivos y aumenta la fiabilidad de tus resultados",
+    problema:
+      "Hay procesos repetitivos en el día a día que consumen tiempo y acaparan más de lo debido. Reserva tu claridad mental para las decisiones importantes, y minimiza el error diario con automatizaciones de datos.",
+    incluye: [
+      "Ingestión de datos",
+      "Definición de parámetros y resultados",
+      "Expresión del problema en un algoritmo/ecuación",
+      "Resultado en forma de acción",
+    ],
+    metricas: [
+      "Tiempo recortado en la toma de decisiones repetitivas",
+      "Reducción en número de errores manuales",
+      "Aumento en decisiones tomadas por ciclo",
     ],
   },
 ];

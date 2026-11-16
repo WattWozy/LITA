@@ -71,8 +71,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-text">
             <h1>
-              Tecnología con la cercanía de quien te conoce por tu
-              nombre.
+              Tecnología para olvidarse de la tecnología.
             </h1>
             <p className="lead">
               Ayudamos a los negocios de nuestra tierra a ganar tiempo construyendo
