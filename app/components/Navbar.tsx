@@ -35,7 +35,7 @@ export default function Navbar() {
       </a>
       
       <nav aria-label="Principal">
-        <a href="/calculadora">Servicios</a>
+        <a href="/servicios">Servicios</a>
         <a href="#metodo">Cómo trabajamos</a>
         <a href="#ingenieria">Ingeniería</a>
         
