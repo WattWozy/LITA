@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="nav">
-      <a href="#top" className="brand" aria-label="Inicio">
+      <a href="/" className="brand" aria-label="Inicio">
         <Image
           src="/favicon.png"
           alt="LITA Desarrollo y Sistemas"
