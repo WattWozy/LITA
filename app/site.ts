@@ -1,7 +1,7 @@
 // Edita aquí los datos de tu empresa.
 export const site = {
-  name: "LITA",
-  email: "niklas2@gmx.es",
+  name: "LiTAR",
+  email: "hola@litar.es",
   city: "Pamplona",
   description:
     "Software a medida e inteligencia artificial para negocios locales, con ingeniería rigurosa y trato cercano.",

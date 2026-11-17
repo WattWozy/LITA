@@ -31,7 +31,7 @@ export default function Navbar() {
           priority
           className="brand-logo"
         />
-        <span className="brand-name">LITA</span>
+        <span className="brand-name">LiTAR</span>
       </a>
       
       <nav aria-label="Principal">

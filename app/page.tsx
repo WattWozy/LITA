@@ -14,14 +14,14 @@ const servicios = [
     ],
   },
   {
-    titulo: "IA que trabaja para tu negocio",
+    titulo: "Tu negocio, más inteligente",
     texto:
-      "Agentes, automatización de tareas repetitivas y análisis de tus propios datos. Soluciones pensadas para una pyme, no para una multinacional: sencillas de usar y con un retorno que se puede medir.",
+      "Análisis de tus propios datos, visualización clara y pronósticos concretos. Soluciones pensadas para una pyme, no para una multinacional: sencillas de usar y con un retorno que se puede medir.",
     ejemplos: [
-      "Análisis de patrones e inteligencia de negocio",
-      "Generación y/o procesamiento de información no estructurada",
-      "RAG-bots conectados a tu catálogo y tus políticas",
-      "Automatización controladad de decisiones",
+      "De 10 minutos a 2 minutos para definir cada pedido",
+      "Los pedidos que llegan por correo se vuelcan solos a tu ERP",
+      "Previsión del stock necesario ajustado a la demanda",
+      "Del pedido al plano de taller sin repetir medidas",
     ],
   },
 ];
@@ -48,19 +48,19 @@ const metodo = [
 const rigor = [
   [
     "Pruebas automáticas",
-    "Cada funcionalidad nace con sus tests. Cambiar el software mañana no da miedo.",
+    "Cada funcionalidad nace con sus tests. Cambiar las reglas de tu negocio mañana no da miedo.",
   ],
   [
     "Arquitectura limpia",
-    "El negocio en el centro, la tecnología en los bordes. Fácil de entender y de cambiar.",
+    "Tu negocio en el centro. Puedes cambiar de proveedor sin perder tu software.",
   ],
   [
     "Despliegue continuo",
-    "Cada cambio se valida y se publica de forma automática y reversible.",
+    "Si algo falla, se corrige sin parar tu negocio.",
   ],
   [
     "Código que es tuyo",
-    "Repositorio, documentación y accesos a tu nombre. Sin dependencias ocultas.",
+    "Repositorio, documentación y accesos a tu nombre.",
   ],
 ];
 
@@ -71,7 +71,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-text">
             <h1>
-              Tecnología para olvidarse de la tecnología.
+              Software a medida y automatización para pymes de Pamplona y Navarra.
             </h1>
             <p className="lead">
               Ayudamos a los negocios de nuestra tierra a ganar tiempo construyendo
@@ -94,7 +94,7 @@ export default function Home() {
               Hola, ¿podemos automatizar los pedidos que ahora apuntamos a mano?
             </p>
             <p className="msg us">
-              Claro. El martes pasamos por la tienda, vemos cómo lo hacéis y os
+              Claro. El martes nos pasamos, vemos cómo lo hacéis y os
               traemos una propuesta con precio cerrado.
             </p>
             <p className="msg them">Perfecto. Aquí os esperamos.</p>

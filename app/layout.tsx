@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Instrument_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from "./components/Navbar";
 import "./globals.css";
 
@@ -7,12 +8,11 @@ const display = Newsreader({ subsets: ["latin"], variable: "--font-display", sty
 const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "LITA · Desarrollo y Sistemas",
-  description: "Desarrollo de software e ingeniería",
-  icons: {
-    icon: "/favicon.png",
-    apple: "/apple-icon.jpg",
-  },
+  metadataBase: new URL("https://litar.es"),
+  title: { default: "Software a medida y automatización en Pamplona | LiTAR", template: "%s | LiTAR" },
+  description: "Desarrollo de software a medida, automatización e integración de sistemas para pymes de Pamplona y Navarra.",
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", locale: "es_ES", siteName: "LiTAR" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -34,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
