@@ -16,7 +16,6 @@ export interface Historia {
   context: string;
   solution: string;
   results: string[];
-  stack: string[];
   video: string;
 }
 
@@ -88,9 +87,9 @@ export const historias: Historia[] = [
     client: "Cercados Orsal",
     sector: "Fabricación metálica y cerramientos · Navarra",
     year: "2026",
-    headline: "Catálogo técnico digital y presupuestos a medida en tiempo real",
+    headline: "Coordinando pedido, inventario, taller y montaje de forma sistemática",
     context:
-      "La gestión de pedido a montaje requería seguimiento del pedido constante y cálculos manuales repetitivos, ralentizando la respuesta comercial e introduciendo errores humanos en el proceso.",
+      "El proceso requiere seguimiento del pedido y cálculos manuales repetitivos, ralentizando la respuesta comercial e introduciendo errores humanos en el proceso.",
     solution:
       "Desarrollamos una solución web rápida con catálogo técnico estructurado y una calculadora interactiva de precios que permite configurar instalaciones completas al instante.",
     results: [
@@ -99,7 +98,6 @@ export const historias: Historia[] = [
       "Catálogo técnico accesible y claro para clientes particulares e industriales",
       "Solución optimizada para consulta desde ordenador o móvil",
     ],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     video: "/videos/orsal.mp4", // <--- Añadido aquí
   },
   /* {

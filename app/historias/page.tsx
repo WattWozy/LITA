@@ -31,13 +31,6 @@ export default function HistoriasPage() {
                     </span>
                     <h2>{item.client}</h2>
                   </div>
-                  <div className="story-tags">
-                    {item.stack.map((tech) => (
-                      <span key={tech} className="tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </header>
 
                 <h3 className="story-headline">{item.headline}</h3>
