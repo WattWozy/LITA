@@ -94,8 +94,8 @@ export default function Home() {
               Hola, ¿podemos automatizar los pedidos que ahora apuntamos a mano?
             </p>
             <p className="msg us">
-              Claro. El martes nos pasamos, vemos cómo lo hacéis y os
-              traemos una propuesta con precio cerrado.
+              Claro. Me paso, vemos cómo lo hacéis y os
+              traigo una propuesta con precio cerrado.
             </p>
             <p className="msg them">Perfecto. Aquí os esperamos.</p>
             <figcaption>Una persona de contacto. Un canal directo.</figcaption>

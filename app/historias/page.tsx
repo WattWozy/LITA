@@ -58,6 +58,20 @@ export default function HistoriasPage() {
 
                 <h3 className="story-headline">{item.headline}</h3>
 
+                {/* Renderizado condicional basado en si el objeto tiene vídeo */}
+                {item.video && (
+                  <div style={{ marginTop: "1.5rem", borderRadius: "8px", overflow: "hidden", background: "#111" }}>
+                    <video
+                      src={item.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                )}
+
                 <div className="two-col" style={{ marginTop: "1.5rem" }}>
                   <div className="panel">
                     <h4>El reto</h4>

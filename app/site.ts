@@ -17,6 +17,7 @@ export interface Historia {
   solution: string;
   results: string[];
   stack: string[];
+  video: string;
 }
 
 export const servicios = [
@@ -98,8 +99,9 @@ export const historias: Historia[] = [
       "Arquitectura ligera y rápida optimizada para consulta desde obra o móvil",
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    video: "/videos/orsal.mp4", // <--- Añadido aquí
   },
-  {
+  /* {
     slug: "frenkit",
     client: "Frenkit",
     sector: "Automoción y componentes de freno · Navarra",
@@ -115,5 +117,6 @@ export const historias: Historia[] = [
       "Base tecnológica preparada para escalar sin degradar el rendimiento",
     ],
     stack: ["Arquitectura Backend", "Integración de Sistemas", "SQL"],
-  },
+    video: ""
+  }, */
 ];
