@@ -36,7 +36,20 @@ p { margin: 0 0 1rem; }
 .lead { font-size: 1.2rem; color: var(--slate); max-width: 52ch; }
 .narrow { max-width: 56ch; }
 
-.nav { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1rem clamp(1.25rem, 5vw, 4rem); background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem clamp(1.25rem, 5vw, 4rem); 
+  /* Tu efecto original de transparencia y blur intacto */
+  background: color-mix(in srgb, var(--paper) 88%, transparent); 
+  backdrop-filter: blur(10px); 
+  border-bottom: 1px solid var(--line); 
+  transition: background 0.3s ease;
+}
 .brand {
   display: inline-flex;
   align-items: center;
@@ -48,7 +61,6 @@ p { margin: 0 0 1rem; }
   height: 36px;
   width: 36px;
   object-fit: contain;
-  /* Si tu logo es oscuro, en dark mode puedes invertirlo o quitar el mix-blend */
 }
 .dark .brand-logo {
   filter: invert(1) hue-rotate(180deg);
@@ -66,6 +78,22 @@ p { margin: 0 0 1rem; }
 .nav nav { display: flex; gap: 1.6rem; align-items: center; }
 .nav nav a { text-decoration: none; color: var(--slate); font-size: .97rem; }
 .nav nav a:hover { color: var(--ink); }
+
+/* Botón hamburguesa (oculto en escritorio) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 0.5rem;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 .btn { display: inline-block; background: var(--crimson); color: #fff !important; padding: .85rem 1.5rem; border-radius: 999px; text-decoration: none; font-weight: 500; transition: background .2s; }
 .btn:hover { background: var(--crimson-dark); }
@@ -200,9 +228,72 @@ p { margin: 0 0 1rem; }
 
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto; } }
+
+/* Adaptación Responsive y Menú Móvil */
 @media (max-width: 900px) {
   .hero, .two-col, .rigor { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
-  .nav nav a:not(.btn) { display: none; }
+
+  /* Cambiar nav a columna cuando se despliega */
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Cuando el menú está abierto, se vuelve sólido */
+  .nav.menu-open {
+    background: var(--paper);
+  }
+
+  /* Contenedor superior en móvil (Logo + Botón hamburguesa) */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Mostrar botón hamburguesa en móvil */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ocultar enlaces por defecto en móvil */
+  .nav nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    padding: 1.5rem 0 1rem;
+    border-top: 1px solid var(--line);
+    margin-top: 1rem;
+  }
+
+  /* Mostrar enlaces cuando el estado isOpen está activo */
+  .nav nav.is-open {
+    display: flex;
+  }
+
+  .nav nav a:not(.btn) {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .nav-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--line);
+  }
 }
-@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+
+/* En escritorio aseguramos que .nav-container no rompa el flex principal */
+@media (min-width: 901px) {
+  .nav-container {
+    display: contents; /* Hace que el div sea invisible para el flexbox de .nav en escritorio */
+  }
+}
