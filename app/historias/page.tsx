@@ -11,22 +11,6 @@ export const metadata: Metadata = {
 export default function HistoriasPage() {
   return (
     <>
-      <header className="nav">
-        <Link href="/" className="brand">
-          {site.name}
-        </Link>
-        <nav>
-          <Link href="/#servicios">Servicios</Link>
-          <Link href="/#proceso">Proceso</Link>
-          <Link href="/historias" aria-current="page">
-            Historias
-          </Link>
-          <Link href="/#contacto" className="btn btn-small">
-            Hablemos
-          </Link>
-        </nav>
-      </header>
-
       <main>
         <section className="section">
           <p className="eyebrow">Casos reales</p>

@@ -90,13 +90,14 @@ export const historias: Historia[] = [
     year: "2026",
     headline: "Catálogo técnico digital y presupuestos a medida en tiempo real",
     context:
-      "La gestión de presupuestos para cerramientos metálicos requería cálculos manuales repetitivos según metros lineales, alturas, acabados y accesorios, ralentizando la respuesta comercial.",
+      "La gestión de pedido a montaje requería seguimiento del pedido constante y cálculos manuales repetitivos, ralentizando la respuesta comercial e introduciendo errores humanos en el proceso.",
     solution:
-      "Desarrollamos una plataforma web rápida con catálogo técnico estructurado y una calculadora interactiva de precios que permite configurar instalaciones completas al instante.",
+      "Desarrollamos una solución web rápida con catálogo técnico estructurado y una calculadora interactiva de precios que permite configurar instalaciones completas al instante.",
     results: [
-      "Reducción drástica del tiempo de elaboración de presupuestos comerciales",
+      "Reducción drástica del tiempo total del pedido al montaje",
+      "Reducción de errores humanos en trámites y cálculos",
       "Catálogo técnico accesible y claro para clientes particulares e industriales",
-      "Arquitectura ligera y rápida optimizada para consulta desde obra o móvil",
+      "Solución optimizada para consulta desde ordenador o móvil",
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     video: "/videos/orsal.mp4", // <--- Añadido aquí

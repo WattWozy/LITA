@@ -37,7 +37,7 @@ export default function Navbar() {
       <nav aria-label="Principal">
         <a href="/servicios">Servicios</a>
         <a href="#metodo">Cómo trabajamos</a>
-        <a href="#ingenieria">Ingeniería</a>
+        <a href="/historias">Historias</a>
         
         <button 
           onClick={toggleTheme}
