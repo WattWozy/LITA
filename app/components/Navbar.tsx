@@ -57,7 +57,6 @@ export default function Navbar() {
       
       <nav aria-label="Principal" className={`nav-links ${isOpen ? 'is-open' : ''}`}>
         <a href="/servicios" onClick={() => setIsOpen(false)}>Servicios</a>
-        <a href="#metodo" onClick={() => setIsOpen(false)}>Cómo trabajamos</a>
         <a href="/historias" onClick={() => setIsOpen(false)}>Historias</a>
         
         <div className="nav-actions">

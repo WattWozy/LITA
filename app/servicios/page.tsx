@@ -45,12 +45,12 @@ export default function ServiciosPage() {
                   <div className="panel">
                     <h4>El problema</h4>
                     <p>{item.problema}</p>
-                    <h4 style={{ marginTop: "1.25rem" }}>Qué incluye</h4>
+                    {/* <h4 style={{ marginTop: "1.25rem" }}>Qué incluye</h4>
                     <ul>
                       {item.incluye.map((x, idx) => (
                         <li key={idx}>{x}</li>
                       ))}
-                    </ul>
+                    </ul> */}
                   </div>
 
                   <div className="panel">
